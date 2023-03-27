@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atmiņas Spēle</title>
+        <link rel="stylesheet" href="static/css/memoryGame.css">
+        <script src="static/js/memorygame.js" defer></script>
+    </head>
+    <body>
+        <!-- Navigational Bar Section -->
+        <div class="banner">
+            <nav class="navbar">
+                <div class="navbar_container">
+                    <a href="/"><img src="static/images/logo.png" class="logo"></a>
+                    <ul class="navbar_menu">
+                        <li><a href="/" class="navbar_links" id="home-page">Mājas</a></li>
+                        <li><a href="/alfabets" class="navbar_links" id="abc-page">Alfabēts</a></li>
+                        <li><a href="/speles" class="navbar_links" id="game-page">Spēles</a></li>
+                        <li><a href="/video" class="navbar_links" id="video-link">Video</a></li>
+                        <li><a href="/par" class="navbar_links" id="about-link">Par</a></li>
+                    </ul>
+                </nav>   
+            </div>
+        </div>
+
+        <div class="game">
+            <div class="controls">
+                <button>Sākt</button>
+                <div class="stats">
+                    <div class="moves">0 Soļu</div>
+                    <div class="timer">Laiks: 0 sekundes</div>
+                </div>
+            </div>
+            <div class="board-container">
+                <div class="board" data-dimension="4"></div>
+                <div class="win">Tu Uzvarēji!</div>
+            </div>
+        </div>
+
+    </body>
+
+</html> 

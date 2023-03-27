@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(/static/images/classroom.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    background: linear-gradient(rgb(8, 0, 0),rgba(0,0,0,0));
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar_container{
+    width: 100%;
+    margin: auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    max-width: 1900px;
+    justify-content: space-between;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar_container ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar_links{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar_linksA{
+  text-decoration: none;
+  color: #ddb938;
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #62DCF6;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+button{
+    width: 100px;
+    height: 75px;
+    padding: 1px 0;
+    text-align: center;
+    margin:15px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: x-large;
+    border: 0px solid #0000005e;
+    background: rgb(43, 123, 202);
+    color:  rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+  }
+   
+  .tooltip span {
+    display:none;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:5px;
+    color:black;
+    background:white; 
+  }
+   
+  .tooltip span img {
+    float:left;
+    /* margin:0px 8px 8px 0; */
+    width: 125px;
+    height: 125px;
+  }
+   
+  .tooltip:hover span {
+    display:block;
+    text-align: center;
+    position:absolute;
+    font-size: large;
+    top:0;
+    left:0;
+    z-index:1000;
+    width: 300px;
+    height: 175px;
+    /* max-width:140px;
+    min-height:100px; */
+    /* border:1px solid black; */
+    margin-top:-145px;
+
+    margin-left:75px;
+    overflow:hidden;
+    /* padding:.5vh; */
+    /* border-radius: 15px; */
+  }
+
+
+
+  .tooltip2 {
+    text-decoration:none;
+    position:relative;
+  }
+   
+  .tooltip2 span {
+    display:none;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:5px;
+    color:black;
+    background:white; 
+  }
+   
+  .tooltip2 span img {
+    float:left;
+    /* margin:0px 8px 8px 0; */
+    width: 125px;
+    height: 125px;
+  }
+   
+  .tooltip2:hover span {
+    display:block;
+    text-align: center;
+    position:absolute;
+    font-size: large;
+    top:0;
+    left:0;
+    z-index:1000;
+    width: 300px;
+    height: 175px;
+    /* max-width:140px;
+    min-height:100px; */
+    /* border:1px solid black; */
+    margin-top:-145px;
+
+    margin-left:-225px;
+    overflow:hidden;
+    /* padding:.5vh; */
+    /* border-radius: 15px; */
+  }

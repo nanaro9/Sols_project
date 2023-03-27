@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+.body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(/static/images/classroom.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 15;
+}
+.navbar{
+    background: linear-gradient(rgb(8, 0, 0),rgba(0,0,0,0));
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+.navbar_container{
+    width: 100%;
+    margin: auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    max-width: 1900px;
+    justify-content: space-between;
+    z-index: 15;
+}
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar_container ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar_links{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #62DCF6;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.wrapper {
+    position: absolute;
+    width: 90%;
+    max-width: 37em;
+    background-color: #fff;
+    padding: 7em 3em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    border-radius: 1em;
+    z-index: 0;
+    visibility: hidden;
+}
+.controls-container {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    z-index: 5;
+}
+#start {
+    font-size: 1.2em;
+    padding: 1em 3em;
+    background-color: #25eef1;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    cursor: pointer;
+}
+#letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em 0.4em;
+    justify-content: center;
+    margin-top: 2em;
+}
+#letter-container button {
+    background-color: #ffffff;
+    border: 2px solid #7786f5;
+    color: #7786f5;
+    outline: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+}
+#letter-container .correct {
+    background-color: #008000;
+    color: #ffffff;
+    border: 2px solid #008000;
+}
+#letter-container .incorrect {
+    background-color: #8a8686;
+    color: #ffffff;
+    border: 2px solid #8a8686;
+}
+.hint-ref {
+    margin-bottom: 1em;
+}
+.hint-ref span {
+    font-weight: 600;
+}
+#chanceCount {
+    margin: 1em 0;
+    position: absolute;
+    top: 0.62em;
+    right: 2em;
+}
+#word {
+    font-weight: 600;
+    margin: 1em 0 2em 0;
+}
+#word span {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.hide {
+    display: none; 
+}

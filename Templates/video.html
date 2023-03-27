@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>SOLS</title>
+        <link href="static/css/videosPage.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <!-- Navigational Bar Section -->
+        <div class="banner">
+            <nav class="navbar">
+                <div class="navbar_container">
+                    <a href="/"><img src="static/images/logo.png" class="logo"></a>
+                    <ul class="navbar_menu">
+                        <li><a href="/" class="navbar_links" id="home-page">Mājas</a></li>
+                        <li><a href="/alfabets" class="navbar_links" id="abc-page">Alfabēts</a></li>
+                        <li><a href="/speles" class="navbar_links" id="game-page">Spēles</a></li>
+                        <li><a href="/video" class="navbar_linksA" id="video-link">Video</a></li>
+                        <li><a href="/par" class="navbar_links" id="about-link">Par</a></li>
+                    </ul>
+                </nav>   
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- SLIDE 1 -->
+            <div class="slide">
+                <iframe class="video" src="https://www.youtube.com/embed/ZX_nxlm2A0s?ecver=2&enablejsapi=1"></iframe>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="slide">
+                <iframe class="video" src="https://www.youtube.com/embed/W5e9GJfHC4A?ecver=2&enablejsapi=1"></iframe>
+            </div>
+            <div class="slide">
+                <iframe class="video" src="https://www.youtube.com/embed/CqyylPSdfhI?ecver=2&enablejsapi=1"></iframe>
+            </div>
+            <!-- END OF SLIDES -->
+            <div class="slide-arrow left"></div>
+            <div class="slide-arrow right"></div>
+        </div>
+
+        <!-- <div class="content3">
+            <h1>Video materiāli<br><br><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/W5e9GJfHC4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </h1>
+        </div> -->
+
+
+        
+
+    </body>
+    <script>src="script.js"</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        $(document).ready(function () {
+    var pos = 0,
+        slides = $('.slide'),
+        numOfSlides = slides.length;
+
+    function nextSlide() {
+        // `[]` returns a vanilla DOM object from a jQuery object/collection
+        slides[pos].video.stopVideo()
+        slides.eq(pos).animate({ left: '-100%' }, 500);
+        pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
+        slides.eq(pos).css({ left: '100%' }).animate({ left: 0 }, 500);
+    }
+
+    function previousSlide() {
+        slides[pos].video.stopVideo()
+        slides.eq(pos).animate({ left: '100%' }, 500);
+        pos = (pos == 0 ? numOfSlides - 1 : --pos);
+        slides.eq(pos).css({ left: '-100%' }).animate({ left: 0 }, 500);
+    }
+
+    $('.left').click(previousSlide);
+    $('.right').click(nextSlide);
+})
+
+function onYouTubeIframeAPIReady() {
+    $('.slide').each(function (index, slide) {
+        // Get the `.video` element inside each `.slide`
+        var iframe = $(slide).find('.video')[0]
+        // Create a new YT.Player from the iFrame, and store it on the `.slide` DOM object
+        slide.video = new YT.Player(iframe)
+    })
+}
+    </script>
+</html>
