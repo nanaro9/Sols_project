@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route("/")
 def main():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route("/alfabets")
 def abc():
@@ -15,7 +15,7 @@ def abc():
 
 @app.route("/speles")
 def games():
-    return render_template('spelesLapa.html')
+    return render_template('speles.html')
 
 @app.route("/video")
 def video():
@@ -27,11 +27,11 @@ def about():
 
 @app.route("/atminasSpele")
 def memoru():
-    return render_template('memoryGame.html')
+    return render_template('atminasSpele.html')
 
 @app.route("/miniVardu")
 def word():
-    return render_template('wordGame.html')
+    return render_template('miniVardu.html')
 
 @app.route("/.well-known/discord")
 def discord():
