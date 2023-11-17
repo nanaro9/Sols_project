@@ -33,6 +33,10 @@ def memoru():
 def word():
     return render_template('wordGame.html')
 
+@app.route("/.well-known/discord")
+def discord():
+    return render_template('discord.html')
+
 
 
 if __name__ == "__main__":
