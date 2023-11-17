@@ -33,10 +33,6 @@ def memoru():
 def word():
     return render_template('miniVardu.html')
 
-@app.route("/.well-known/discord")
-def discord():
-    return render_template('.well-known/discord.html')
-
 
 
 if __name__ == "__main__":
