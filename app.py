@@ -37,6 +37,10 @@ def word():
 def discord():
     return render_template('discord.html')
 
+@app.route("/.well-known/")
+def discord():
+    return render_template('.well-known.html')
+
 
 
 if __name__ == "__main__":
