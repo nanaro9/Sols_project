@@ -35,11 +35,7 @@ def word():
 
 @app.route("/.well-known/discord")
 def discord():
-    return render_template('discord.html')
-
-@app.route("/.well-known/")
-def discord():
-    return render_template('.well-known.html')
+    return render_template('.well-known/discord.html')
 
 
 
